@@ -1,0 +1,9 @@
+{
+    "template": "page_nav",
+    "description": "Replaces page anchor with AJAX.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<a href=\"{{ link($link, $data, $params + {($pageParam): ($page > 1 ? $page : null)}) }}\">{$page}</a>",
+    "replace": "<a href=\"javascript:\"\n   data-xf-click=\"ajax-click\"\n   data-action=\"{{ link($link, $data, $params + {($pageParam): ($page > 1 ? $page : null)}) }}\"\n   data-replace=\".block\">\n\t{$page}\n</a>"
+}

@@ -1,0 +1,9 @@
+{
+    "template": "page_nav",
+    "description": "Replaces next pager anchor with AJAX.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<a href=\"{$next}\" class=\"pageNav-jump pageNav-jump--next\">{{ phrase('next') }}</a>",
+    "replace": "<a href=\"javascript:\"\n   class=\"pageNav-jump pageNav-jump--next\"\n   data-xf-click=\"ajax-click\"\n   data-action=\"{$next}\"\n   data-replace=\".block\">\n\t{{ phrase('next') }}\n</a>"
+}

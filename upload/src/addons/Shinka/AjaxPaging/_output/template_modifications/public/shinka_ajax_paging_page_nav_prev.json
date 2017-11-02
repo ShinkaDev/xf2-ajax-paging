@@ -1,0 +1,9 @@
+{
+    "template": "page_nav",
+    "description": "Replaces previous pager anchor with AJAX.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<a href=\"{$prev}\" class=\"pageNav-jump pageNav-jump--prev\">{{ phrase('prev') }}</a>",
+    "replace": "<a href=\"javascript:\"\n   class=\"pageNav-jump pageNav-jump--prev\"\n   data-xf-click=\"ajax-click\"\n   data-action=\"{$prev}\"\n   data-replace=\".block\">\n\t{{ phrase('prev') }}\n</a>"
+}

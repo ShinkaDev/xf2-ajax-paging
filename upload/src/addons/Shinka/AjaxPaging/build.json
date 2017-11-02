@@ -1,0 +1,8 @@
+{
+  "additional_files": [
+    "js/shinka/ajaxpaging"
+  ],
+  "minify": [
+    "js/shinka/ajaxpaging/paging.js"
+  ]
+}
