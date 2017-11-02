@@ -19,6 +19,7 @@ Replaces pagination links with AJAX calls.
  * Import development output by executing 
  ```
  > php cmd.php xf-dev:import --addon Shinka/AjaxPaging
+ ```
 
 ## Technical
 * Uses a custom XF handler that pigeons code and logic from XFAjaxSubmit
