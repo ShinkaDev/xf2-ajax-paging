@@ -5,6 +5,7 @@
 XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
     eventNameSpace: 'XFShinkaAjaxPagingClick',
 
+    // TODO: prune out irrelevant options
     options: {
         redirect: true,
         skipOverlayRedirect: false,
@@ -12,10 +13,13 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
         hideOverlay: true,
         replace: null,
         formData: null,
-        method: "get",
+        method: 'get',
         action: null,
-        disableSubmit: '.button, :submit, :reset, [data-disable-submit]'
+        disableSubmit: '.button, :submit, :reset, [data-disable-submit], a[data-xf-click="ajax-click"]',
+        animate: '.structItemContainer-group, .block-container.lbContainer'
     },
+
+    submitPending: false,
 
     init: function()
     {
@@ -23,9 +27,19 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
 
     click: function(e)
     {
-        e.preventDefault();
-
         var self = this;
+
+        if (self.submitPending)
+        {
+            if (e)
+            {
+                e.preventDefault();
+            }
+            return;
+        }
+
+        e.preventDefault();
+        self.submitPending = true;
 
         var event = $.Event('ajax-click:before'),
             config = {
@@ -40,6 +54,8 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
         // do this in a timeout to ensure that all other submit handlers run
         setTimeout(function()
         {
+            self.disableButtons();
+
             XF.ajax(
                 config.method,
                 config.action,
@@ -48,6 +64,12 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
                 config.ajaxOptions
             ).always(function()
             {
+                // delay re-enable slightly to allow animation to potentially happen
+                setTimeout(function()
+                {
+                    self.submitPending = false;
+                    self.enableButtons();
+                }, 300);
                 event = $.Event('ajax-click:always');
             });
         }, 0);
@@ -82,8 +104,6 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
             XF.alert('Response was not JSON.');
             return;
         }
-
-        console.log(data, status, xhr);
 
         var $target = this.$target;
         var self = this;
@@ -122,7 +142,7 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
             {
                 XF.setupHtmlInsert(data.errorHtml, function($html, container)
                 {
-                    var title = container.h1 || container.title || XF.phrase('oops_we_ran_into_some_problems');
+                    const title = container.h1 || container.title || XF.phrase('oops_we_ran_into_some_problems');
                     XF.overlayMessage(title, $html);
                 });
             }
@@ -234,6 +254,10 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
             $old = this.$target.find(selectorOld).first();
             if (!$old.length)
             {
+                $old = this.$target.parents(selectorOld).first();
+            }
+            if (!$old.length)
+            {
                 $old = $(selectorOld).first();
             }
         }
@@ -244,14 +268,10 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
             return false;
         }
 
-        if ($html.is(selectorNew))
-        {
-            $new = $html;
-        }
-        else
-        {
-            $new = $html.find(selectorNew).first();
-        }
+        // insert only elements that match the given selector
+        // mostly for paging threads
+        $filtered = $html.filter(selectorNew);
+        $new = $filtered ? $filtered : $html.find(selectorNew).first();
 
         if (!$new.length)
         {
@@ -260,17 +280,30 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
         }
 
         $new.hide().insertAfter($old);
-        $old.xfFadeUp(null, function()
+
+        var $animateIn, $animateOut;
+        if (this.options.animate)
+        {
+            $animateIn = $new.find(this.options.animate) || $new;
+            $animateOut = $old.find(this.options.animate) || $old;
+        }
+
+        // remove transitions so slide in and slide out animate properly
+        // mostly for paging threads (again)
+        $animateIn.css('transition', 'none');
+        $animateOut.css('transition', 'none');
+
+        $animateOut.xfFadeUp(null, function()
         {
             $old.remove();
 
             if ($new.length)
             {
                 XF.activate($new);
-                onComplete(false);
+                $animateIn.hide();
+                $new.show();
+                $animateIn.xfFadeDown(null, XF.layoutChange);
             }
-
-            $new.xfFadeDown(null, XF.layoutChange);
         });
 
         return true;
