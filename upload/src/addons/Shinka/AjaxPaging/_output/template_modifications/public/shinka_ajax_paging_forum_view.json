@@ -1,0 +1,9 @@
+{
+    "template": "forum_view",
+    "description": "Adds animate and replace to page nav params.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "params=\"{$filters}\"",
+    "replace": "params=\"{{ $filters + {'replace': '.block with .block', 'animate': '.structItemContainer-group'} }}\""
+}

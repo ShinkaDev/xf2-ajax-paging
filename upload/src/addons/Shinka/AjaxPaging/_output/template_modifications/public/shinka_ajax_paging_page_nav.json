@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": "<a href=\"{{ link($link, $data, $params + {($pageParam): ($page > 1 ? $page : null)}) }}\">{$page}</a>",
-    "replace": "<a href=\"javascript:\"\n   data-xf-click=\"ajax-click\"\n   data-action=\"{{ link($link, $data, $params + {($pageParam): ($page > 1 ? $page : null)}) }}\"\n   data-replace=\".block\">\n\t{$page}\n</a>"
+    "replace": "<a href=\"javascript:\"\n   data-xf-click=\"ajax-click\"\n   data-replace=\"{$params.replace}\"\n   data-animate=\"{$params.animate}\">\n\t{$page}\n</a>"
 }

@@ -1,0 +1,9 @@
+{
+    "template": "member_list",
+    "description": "Adds animate and replace to page nav params.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:pagenav",
+    "replace": "<xf:pagenav params=\"{{ {'replace': '.block with .block', 'animate': '.block-body'} }}\""
+}

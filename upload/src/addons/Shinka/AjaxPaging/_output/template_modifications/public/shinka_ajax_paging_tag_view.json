@@ -1,0 +1,9 @@
+{
+    "template": "tag_view",
+    "description": "Adds animate and replace to page nav params.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "params=\"{{ {'mod': $activeModType} }}\"",
+    "replace": "params=\"{{ {'mod': $activeModType, 'replace': '.block with .block', 'animate': '.block-body'} }}\""
+}

@@ -1,0 +1,9 @@
+{
+    "template": "forum_new_posts",
+    "description": "Adds animate and replace to page nav params.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "params=\"{{ {'f': $findNew.find_new_id} }}\"",
+    "replace": "params=\"{{ {'f': $findNew.find_new_id, 'replace': '.block with .block', 'animate': '.structItemContainer' } }}\""
+}

@@ -1,0 +1,9 @@
+{
+    "template": "online_list",
+    "description": "",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "params=\"{$linkParams}\"",
+    "replace": "params=\"{{ $linkParams + {'replace': '.block with .block', 'animate': '.structItemContainer'} }}\""
+}

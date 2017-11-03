@@ -1,0 +1,9 @@
+{
+    "template": "helper_js_global",
+    "description": "Adds JavaScript src to the global header.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<!--XF:CSS-->",
+    "replace": "<xf:js src=\"shinka/ajaxpaging/paging.js\" min=\"1\" />\n$0"
+}
