@@ -11,12 +11,12 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
         skipOverlayRedirect: false,
         forceFlashMessage: false,
         hideOverlay: true,
-        replace: null,
         formData: null,
         method: 'get',
         action: null,
         disableSubmit: '.button, :submit, :reset, [data-disable-submit], a[data-xf-click="ajax-click"]',
-        animate: '.structItemContainer-group, .structItemContainer, .block-container.lbContainer, .block-body'
+        replace: '.block with .block',
+        animate: '.block-body'
     },
 
     submitPending: false,
