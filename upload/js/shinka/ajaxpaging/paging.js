@@ -16,7 +16,7 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
         method: 'get',
         action: null,
         disableSubmit: '.button, :submit, :reset, [data-disable-submit], a[data-xf-click="ajax-click"]',
-        animate: '.structItemContainer-group, .block-container.lbContainer'
+        animate: '.structItemContainer-group, .structItemContainer, .block-container.lbContainer, .block-body'
     },
 
     submitPending: false,
@@ -104,6 +104,8 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
             XF.alert('Response was not JSON.');
             return;
         }
+
+        console.log(data, status, xhr);
 
         var $target = this.$target;
         var self = this;
@@ -251,11 +253,7 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
         }
         else
         {
-            $old = this.$target.find(selectorOld).first();
-            if (!$old.length)
-            {
-                $old = this.$target.parents(selectorOld).first();
-            }
+            $old = this.$target.parents(selectorOld).first();
             if (!$old.length)
             {
                 $old = $(selectorOld).first();
@@ -269,9 +267,9 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
         }
 
         // insert only elements that match the given selector
-        // mostly for paging threads
+        // mostly for paging discussions
         $filtered = $html.filter(selectorNew);
-        $new = $filtered ? $filtered : $html.find(selectorNew).first();
+        $new = $filtered.length ? $filtered : $html.find(selectorNew).first();
 
         if (!$new.length)
         {
@@ -279,23 +277,44 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
             return false;
         }
 
+        // $inlineMod = $old.find('.')
         $new.hide().insertAfter($old);
 
         var $animateIn, $animateOut;
         if (this.options.animate)
         {
-            $animateIn = $new.find(this.options.animate) || $new;
-            $animateOut = $old.find(this.options.animate) || $old;
+            $animateIn = $new.find(this.options.animate);
+            $animateOut = $old.find(this.options.animate);
+
+            $animateIn = $animateIn.length ? $animateIn : $new;
+            $animateOut = $animateOut.length ? $animateOut : $old;
+        } else
+        {
+            $animateIn = $new;
+            $animateOut = $old;
         }
 
         // remove transitions so slide in and slide out animate properly
-        // mostly for paging threads (again)
+        // mostly for paging discussions (again)
         $animateIn.css('transition', 'none');
         $animateOut.css('transition', 'none');
 
         $animateOut.xfFadeUp(null, function()
         {
             $old.remove();
+
+            // replace inline mod bar because the new inline mod button will spawn a unique one
+            $inlineModBar = $('.inlineModBar ');
+            if ($inlineModBar.length)
+            {
+                $inlineModBar.css('opacity', 0);
+                // allow time for CSS transition
+                setTimeout(function()
+                {
+                    $inlineModBar.remove();
+                }, 300);
+                $('.js-inlineModTrigger').click();
+            }
 
             if ($new.length)
             {
