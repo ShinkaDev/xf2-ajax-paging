@@ -9,7 +9,8 @@ Replaces pagination links with AJAX calls.
  
 ## Features
 * Changing pages (e.g. inside a thread) no longer reloads the page
-[alt text](https://github.com/kalynrobinson/xf2_ajax_paging/raw/master/docs/images/ajax.gif "Paging")
+
+![Paging](https://github.com/kalynrobinson/xf2_ajax_paging/raw/master/docs/images/ajax.gif "Paging")
  
 ## Development
 ### Setup
