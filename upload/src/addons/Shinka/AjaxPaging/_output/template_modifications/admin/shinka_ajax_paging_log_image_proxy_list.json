@@ -1,0 +1,9 @@
+{
+    "template": "log_image_proxy_list",
+    "description": "Adds animate and replace to page nav params.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "params=\"{$filters}\"",
+    "replace": "params=\"{{ $filters ? $filters  + {'ajax': true, 'replace': 'div.block with div.block'} : {'ajax': true, 'replace': 'div.block with div.block'} }}\""
+}

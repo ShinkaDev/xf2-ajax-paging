@@ -1,6 +1,6 @@
 {
     "template": "page_nav",
-    "description": "Replaces previous pager anchor with AJAX.",
+    "description": "Replaces previous page anchor with AJAX.",
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",

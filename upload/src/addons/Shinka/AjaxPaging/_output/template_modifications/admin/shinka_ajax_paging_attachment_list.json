@@ -1,0 +1,9 @@
+{
+    "template": "attachment_list",
+    "description": "Adds animate and replace to page nav params.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "params=\"{$linkFilters}\"",
+    "replace": "params=\"{{ $linkFilters ? $linkFilters + {'ajax': true} : {'ajax': true} }}\""
+}

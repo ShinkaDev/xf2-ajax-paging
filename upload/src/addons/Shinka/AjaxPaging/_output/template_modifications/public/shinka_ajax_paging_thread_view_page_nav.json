@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": "<xf:pagenav",
-    "replace": "<xf:pagenav params=\"{{ {'replace': '.block.block--messages with .block.block--messages', 'animate': '.block-body'} }}\""
+    "replace": "<xf:pagenav params=\"{{ {'ajax': true, 'replace': '.block.block--messages with .block.block--messages'} }}\""
 }

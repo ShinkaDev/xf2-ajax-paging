@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": "params=\"{$filters}\"",
-    "replace": "params=\"{{ $filters + {'replace': '.block with .block', 'animate': '.structItemContainer-group'} }}\""
+    "replace": "params=\"{{ $filters ? $filters + {'ajax': true, 'animate': '.structItemContainer-group'} : {'ajax': true, 'animate': '.structItemContainer-group'} }}\""
 }

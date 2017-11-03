@@ -1,0 +1,9 @@
+{
+    "template": "template_list",
+    "description": "Adds animate and replace to page nav params.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:pagenav\n\t\tpage=\"{$page}\" perpage=\"{$perPage}\" total=\"{$total}\"\n\t\tlink=\"styles/templates\"\n\t\tparams=\"{$linkParams}\"",
+    "replace": "<xf:pagenav\n\t\tpage=\"{$page}\" perpage=\"{$perPage}\" total=\"{$total}\"\n\t\tlink=\"styles/templates\"\n\t\tparams=\"{{ $linkParams ? $linkParams + {'ajax': true} : {'ajax': true} }}\""
+}

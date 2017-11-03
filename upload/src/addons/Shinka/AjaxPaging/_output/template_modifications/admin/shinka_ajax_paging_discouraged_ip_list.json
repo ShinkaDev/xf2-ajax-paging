@@ -1,0 +1,9 @@
+{
+    "template": "discouraged_ip_list",
+    "description": "Adds animate and replace to page nav params.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "'direction': ($direction != 'desc' ? $direction : '')",
+    "replace": "'direction': ($direction != 'desc' ? $direction : ''),\n'ajax': true, 'replace': 'form.block:first'"
+}

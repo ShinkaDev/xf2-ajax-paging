@@ -1,5 +1,5 @@
 {
-    "template": "conversation_list",
+    "template": "tag_list",
     "description": "Adds animate and replace to page nav params.",
     "execution_order": 10,
     "enabled": true,

@@ -1,9 +1,9 @@
 {
-    "template": "member_view",
+    "template": "user_change_log",
     "description": "Adds animate and replace to page nav params.",
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
     "find": "<xf:pagenav",
-    "replace": "<xf:pagenav params=\"{{ {'ajax': true, 'replace': '#profile-posts with #profile-posts', 'animate': '#profile-posts'} }}\""
+    "replace": "<xf:pagenav params=\"{{ {'ajax': true} }}\""
 }

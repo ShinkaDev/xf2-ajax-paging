@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": "params=\"{{ {'f': $findNew.find_new_id} }}\"",
-    "replace": "params=\"{{ {'f': $findNew.find_new_id, 'replace': '.block with .block', 'animate': '.structItemContainer' } }}\""
+    "replace": "params=\"{{ {'f': $findNew.find_new_id, 'ajax': true, 'animate': '.structItemContainer' } }}\""
 }

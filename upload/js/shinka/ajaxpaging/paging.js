@@ -1,11 +1,19 @@
 /**
- * Submits an AJAX request with the given data attributes.
+ * Submits an AJAX request with the given attributes.
  * Most of code is pigeoned from XF.AjaxSubmit.
+ *
+ * @property replace       A selector and optionally a second selector the first should be replaced with.
+ *                         Selectors are delimited by "with".
+ *                         Defaults to `.block with .block`.
+ * @property animate       The selector that should be slid in and out of view. If `null`, replace will be animated.
+ *                         Defaults to `.block-body`.
+ * @property disableSubmit Selectors to disable while the request is processing to prevent duplicate requests.
+ *                         Defaults to `.button, :submit, :reset, [data-disable-submit], a[data-xf-click="ajax-click"]`.
+ * @property action        URL of request. Defaults to `null`.
  */
 XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
-    eventNameSpace: 'XFShinkaAjaxPagingClick',
 
-    // TODO: prune out irrelevant options
+    eventNameSpace: 'XFShinkaAjaxPagingClick',
     options: {
         redirect: true,
         skipOverlayRedirect: false,
@@ -21,10 +29,12 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
 
     submitPending: false,
 
-    init: function()
-    {
-    },
+    init: function() { },
 
+    /**
+     * Composes and sends an AJAX request from the given options. Disables buttons until request completes or times out.
+     * @param e Click event
+     */
     click: function(e)
     {
         var self = this;
@@ -97,6 +107,12 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
         $(disable).prop('disabled', false);
     },
 
+    /**
+     * Handles redirection, overlays, and parsing the response HTML.
+     * @param data
+     * @param status
+     * @param xhr
+     */
     submitResponse: function(data, status, xhr)
     {
         if (typeof data != 'object')
@@ -233,6 +249,13 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
         }
     },
 
+    /**
+     * Finds and replaces the old selector with the new selector from the response HTML.
+     * Animates children if option is provided; otherwise animates entire element.
+     * @param $html
+     * @param onComplete
+     * @returns {boolean}
+     */
     doSubmitReplace: function($html, onComplete)
     {
         var replace = this.options.replace;
@@ -312,8 +335,8 @@ XF.ShinkaAjaxPagingClick = XF.Click.newHandler({
                 setTimeout(function()
                 {
                     $inlineModBar.remove();
-                }, 300);
-                $('.js-inlineModTrigger').click();
+                    $('.js-inlineModTrigger').click();
+                }, 100);
             }
 
             if ($new.length)

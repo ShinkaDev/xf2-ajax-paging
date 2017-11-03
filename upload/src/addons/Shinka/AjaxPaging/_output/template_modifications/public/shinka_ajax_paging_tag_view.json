@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": "params=\"{{ {'mod': $activeModType} }}\"",
-    "replace": "params=\"{{ {'mod': $activeModType, 'replace': '.block with .block', 'animate': '.block-body'} }}\""
+    "replace": "params=\"{{ {'mod': $activeModType, 'ajax': true} }}\""
 }

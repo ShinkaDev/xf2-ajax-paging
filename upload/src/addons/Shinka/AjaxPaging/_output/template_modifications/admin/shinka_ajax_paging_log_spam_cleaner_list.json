@@ -1,6 +1,6 @@
 {
-    "template": "watched_threads_list",
-    "description": "Adds animate and replace to page nav params.",
+    "template": "log_spam_cleaner_list",
+    "description": "",
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
