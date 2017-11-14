@@ -4,6 +4,6 @@
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
-    "find": "params=\"{{ {'f': $findNew.find_new_id} }}\"",
-    "replace": "params=\"{{ {'f': $findNew.find_new_id, 'ajax': true, 'animate': '.structItemContainer' } }}\""
+    "find": "<div class=\"block\" data-xf-init=\"",
+    "replace": "<div class=\"block\" data-xf-init=\"ajax-page "
 }

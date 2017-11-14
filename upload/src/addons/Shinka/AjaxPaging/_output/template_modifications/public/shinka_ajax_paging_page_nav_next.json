@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": "<a href=\"{$next}\" class=\"pageNav-jump pageNav-jump--next\">{{ phrase('next') }}</a>",
-    "replace": "<a href=\"{{ $params.ajax ? 'javascript:' : $next }}\"\n   class=\"pageNav-jump pageNav-jump--next\"\n   data-xf-click=\"{{ $params.ajax ? 'ajax-click' : '' }}\"\n   data-action=\"{$next}\"\n   {{ $params.replace ? \"data-replace='{$params.replace}'\" : '' }}\n   {{ $params.animate ? \"data-animate='{$params.animate}'\" : '' }}>\n\t{{ phrase('next') }}\n</a>"
+    "replace": "<a href=\"{$next}\" \n   class=\"pageNav-jump pageNav-jump--next\"\n   data-page=\"{{ $current + 1 }}\">\n\t{{ phrase('next') }}\n</a>"
 }

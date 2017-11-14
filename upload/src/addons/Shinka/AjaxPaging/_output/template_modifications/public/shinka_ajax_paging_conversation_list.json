@@ -4,6 +4,6 @@
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
-    "find": "params=\"{$filters}\"",
-    "replace": "params=\"{{ $filters ? $filters + {'ajax': true} : {'ajax': true} }}\""
+    "find": "<div class=\"block\" data-xf-init=\"inline-mod\"",
+    "replace": "<div class=\"block\"\n\t data-xf-init=\"inline-mod ajax-page\"\n\t data-page=\"{$page}\""
 }

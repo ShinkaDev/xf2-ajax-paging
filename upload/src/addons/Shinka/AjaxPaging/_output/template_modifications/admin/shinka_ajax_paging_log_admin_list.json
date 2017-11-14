@@ -4,6 +4,6 @@
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
-    "find": "params=\"{$linkFilters}\"",
-    "replace": "params=\"{{ $linkFilters ? $linkFilters + {'ajax': true, 'replace': 'div.block with div.block'} :  {'ajax': true, 'replace': 'div.block with div.block'} }}\""
+    "find": "<div class=\"block\">",
+    "replace": "<div class=\"block\"\n\t data-xf-init=\"ajax-page\"\n\t data-page=\"{$page}\"\n\t data-filter=\"div.block\"\n\t data-replace=\"div.block .block-container, div.block .block-outer with .block-container, .block-outer\">"
 }

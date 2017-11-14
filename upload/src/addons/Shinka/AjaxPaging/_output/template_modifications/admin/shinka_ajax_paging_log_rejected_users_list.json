@@ -4,6 +4,6 @@
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
-    "find": "params=\"{$linkFilters}\"",
-    "replace": "params=\"{{ $linkFilters ? $linkFilters + {'ajax': true} : {'ajax': true} }}\""
+    "find": "<div class=\"block\">",
+    "replace": "<div class=\"block\"\n\t data-xf-init=\"ajax-page\"\n\t data-page=\"{$page}\">"
 }

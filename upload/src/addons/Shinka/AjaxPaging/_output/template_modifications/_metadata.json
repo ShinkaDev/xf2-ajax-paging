@@ -1,152 +1,155 @@
 {
     "admin/shinka_ajax_paging_admin_page_nav_next.json": {
-        "hash": "acce6e7531e1bf7a9c50e462dce2c5b6"
+        "hash": "7ae4822e55fb46c0aecd1a95dcee01dc"
     },
     "admin/shinka_ajax_paging_admin_page_nav_prev.json": {
-        "hash": "7c8a19c35c4be09175c4420273386e29"
+        "hash": "8f3d29d9f1212000c162921ecc379111"
     },
     "admin/shinka_ajax_paging_attachment_list.json": {
-        "hash": "f45e85f0387eb75d675cb92e8c2a7d27"
+        "hash": "18ca394aab7e8a0a4ec142c3bb09e11a"
     },
     "admin/shinka_ajax_paging_ban_email_list.json": {
-        "hash": "41d9fe78e8a609962894731f7dc08702"
+        "hash": "aeb96389e4bfbe00454723103f7d5d4c"
     },
     "admin/shinka_ajax_paging_discouraged_ip_list.json": {
-        "hash": "c538f2bbd6190fec467c5eadd6e199e1"
+        "hash": "63c30edeee3a9b9ce73f2777910f16c5"
     },
     "admin/shinka_ajax_paging_log_admin_list.json": {
-        "hash": "d632168021724d140c76bba7ce98f244"
+        "hash": "d9c96c079fbfd0b5b71110f3f76e980a"
     },
     "admin/shinka_ajax_paging_log_email_bounce_list.json": {
-        "hash": "5c2d778b56677bf0d59125a7991bbf49"
+        "hash": "eab4aac1fe956a0950fb46ff3eed428b"
     },
     "admin/shinka_ajax_paging_log_image_proxy_list.json": {
-        "hash": "d77a7ca3087364d032a86a912d221d66"
+        "hash": "5ec444380457d9ac92497fbbd600b997"
     },
     "admin/shinka_ajax_paging_log_link_proxy_list.json": {
-        "hash": "67116d324466d3dad22053a892241712"
+        "hash": "1ab288dcb50e07ce3ba605586a0ae748"
     },
     "admin/shinka_ajax_paging_log_moderator_list.json": {
-        "hash": "a104283191bfef7404651b4ba57fb22c"
+        "hash": "b722f0b069c80f6dc39c4d41ec4b2894"
     },
     "admin/shinka_ajax_paging_log_oembed_list.json": {
-        "hash": "ea09008dbe9eaf3dcb550b01716cff7a"
+        "hash": "131945080616ef6e1b5255fb69e068d6"
     },
     "admin/shinka_ajax_paging_log_rejected_users_list.json": {
-        "hash": "c106e2dda4f28840a80b3bbf842b8446"
+        "hash": "ba1cca98d2d77ead6634b1d101241920"
     },
     "admin/shinka_ajax_paging_log_server_error_list.json": {
-        "hash": "4f352940e295498262914a56783a5f3a"
+        "hash": "9c5141cc46ea6aa4aa5342d08c18b5f5"
     },
     "admin/shinka_ajax_paging_log_spam_cleaner_list.json": {
-        "hash": "912ba1745689b52ea7c305489be6c6ea"
+        "hash": "36ee2a7f1bbe6e6b8ce81febb781d144"
     },
     "admin/shinka_ajax_paging_log_spam_trigger_list.json": {
-        "hash": "8b3655bd8c09e71ea817fb236eb03f73"
+        "hash": "5a2460e93daba7db836a2b7266ac8da2"
     },
     "admin/shinka_ajax_paging_logs_payment_provider_list.json": {
-        "hash": "92a46ff1e0398de98c9776b8e462ee00"
+        "hash": "4884ecc73eb56c5948f9d8f37d88f40c"
     },
     "admin/shinka_ajax_paging_page_tools_file_check.json": {
-        "hash": "e27de4a09ec14f9080135eac07a2bc39"
+        "hash": "2df0360af70d426710d8350bf2d9e221"
     },
     "admin/shinka_ajax_paging_phrase_list.json": {
-        "hash": "cb65608935a6efa813e83e07d40855de"
+        "hash": "499d4d3375a05bfe91b4229a8c756644"
     },
     "admin/shinka_ajax_paging_tag_list.json": {
-        "hash": "36e2dbb47b313299e2df04484d67a066"
+        "hash": "1f7137b19c1e85e20def2a54441c3a70"
     },
     "admin/shinka_ajax_paging_tag_view_ban_user_list.json": {
-        "hash": "ea2100690efea2f56a9431da5ba4e3bc"
+        "hash": "e51eed06b8761e04d04daa031ab23f98"
     },
     "admin/shinka_ajax_paging_tag_viewban_ip_list.json": {
-        "hash": "4b5139e5cabb22368624c741f5d8d873"
+        "hash": "92def50a6f546eccd293728f0c6198be"
     },
     "admin/shinka_ajax_paging_tag_viewlog_user_change_list.json": {
-        "hash": "63ac96ca7ca073d35a64f04afb630dc8"
+        "hash": "920d325f756720974e068c0bda874f0d"
     },
     "admin/shinka_ajax_paging_template_list.json": {
-        "hash": "224eee316be80d637955b6a06385df13"
+        "hash": "46464d8d5390719a6a5956e10bbfd58a"
     },
     "admin/shinka_ajax_paging_thread_reply_ban_list.json": {
-        "hash": "6a31ee712e225acc99b005cb2933899a"
+        "hash": "4b48cad4ff38e73d2a7a6854c457c6ca"
     },
     "admin/shinka_ajax_paging_user_change_log.json": {
-        "hash": "f7c66df75d873d4dac82f10ee6f7032f"
+        "hash": "3d2971de913db6b6785cbba9c419d394"
     },
     "admin/shinka_ajax_paging_user_group_promotion_history.json": {
-        "hash": "f81e7a32679b70cd0fb9b8baee0aa4aa"
+        "hash": "c03052b6cf1a1b85b01135aeb940db72"
     },
     "admin/shinka_ajax_paging_user_list.json": {
-        "hash": "68cec12c03b134a33e73280c18870826"
+        "hash": "3c8c0cf851503243cc44361775ec193a"
     },
     "admin/shinka_ajax_paging_user_upgrade_active_list.json": {
-        "hash": "509df50072d73436441f7f8945bb5caa"
+        "hash": "264397304471bc4561b47b54323701aa"
     },
     "admin/shinka_ajax_paging_user_upgrade_expired_list.json": {
-        "hash": "cdbd95d9eb8370e28456b787e10005ef"
+        "hash": "5d625c13d0581ede61bb011aa84d716e"
     },
     "admin/shinka_thread_log_admin_page_nav.json": {
-        "hash": "147eba0fb8e8981d3ce3b069b56bcdd7"
+        "hash": "e7b400d0f97c413222e0b214d574ad36"
     },
     "public/shinka_ajax_paging_account_alerts.json": {
-        "hash": "6ef9a401483ba64575fdc4eaa55c67c9"
+        "hash": "40f36daf1394780a448cb89632ca5dfd"
     },
     "public/shinka_ajax_paging_account_likes.json": {
-        "hash": "995c7b6f90f87e1059ccd1c5e3203a82"
+        "hash": "916219f4a15f580d942f4ba4530118e6"
     },
     "public/shinka_ajax_paging_conversation_list.json": {
-        "hash": "84688e568de8f3513092129db0143a66"
+        "hash": "3c9c4a4cba07eeb3e7b72493ad4f1186"
     },
     "public/shinka_ajax_paging_conversation_view.json": {
-        "hash": "f3100e24bcd0e2af7be615913b8a8c83"
+        "hash": "f60a95fc285ec476acf33647dde51834"
     },
     "public/shinka_ajax_paging_find_threads_list.json": {
-        "hash": "bfbd2cb0edd69e399bafc27cdd020053"
+        "hash": "edcf9c8529a12ada35416af5ba2839cb"
     },
     "public/shinka_ajax_paging_forum_new_posts.json": {
-        "hash": "001bc929e4f0a7878d2fa50e7c425183"
+        "hash": "70d5a25f8944d7e944b67d5b06cd1ef7"
     },
     "public/shinka_ajax_paging_forum_view.json": {
-        "hash": "c7ba4eb19a57f821c25f55f59d2ae50f"
+        "hash": "4bfba399d9f78ba7ab5c03caf769d32d"
     },
     "public/shinka_ajax_paging_helper_js_global.json": {
-        "hash": "cede21554697ecd5c63068af2eb63bee"
+        "hash": "f4128942612636931d0e4ed2b1988d83"
+    },
+    "public/shinka_ajax_paging_helper_js_global_phrase.json": {
+        "hash": "3e8e98dd71e46ca7d4b01c0ea270a4a9"
     },
     "public/shinka_ajax_paging_member_list.json": {
-        "hash": "6baa573d1afc3cd27b4261ddccfdae7e"
+        "hash": "0ae62429c251a00a904ce60ab44c2a27"
     },
     "public/shinka_ajax_paging_member_view.json": {
-        "hash": "df303532a1a38d9a8842c613db22af36"
+        "hash": "f7c199d269f942bfb8d3da494361d9ce"
     },
     "public/shinka_ajax_paging_online_list.json": {
-        "hash": "ebeac862cd89ae81f163b2e52b505175"
+        "hash": "cb3aebb8168ad150b9452f8189b75063"
     },
     "public/shinka_ajax_paging_page_nav.json": {
-        "hash": "8d896ee654b8e0afb8080cedc0ba67af"
+        "hash": "e7b400d0f97c413222e0b214d574ad36"
     },
     "public/shinka_ajax_paging_page_nav_next.json": {
-        "hash": "acce6e7531e1bf7a9c50e462dce2c5b6"
+        "hash": "7ae4822e55fb46c0aecd1a95dcee01dc"
     },
     "public/shinka_ajax_paging_page_nav_prev.json": {
-        "hash": "e9d082dc5aaae0708b6b65602c5f58ca"
+        "hash": "2687cb5525a19c5132e31c21c421d3bd"
     },
     "public/shinka_ajax_paging_search_results.json": {
-        "hash": "f89571563c09efe9d6886fbe55e89ae1"
+        "hash": "b51398957fca0dc803ca70e37ec68a58"
     },
     "public/shinka_ajax_paging_tag_view.json": {
-        "hash": "4617e1bf4afde26f794327967fce003a"
+        "hash": "3ca0de20eaa60f6889055509dc668b87"
     },
     "public/shinka_ajax_paging_thread_view_page_nav.json": {
-        "hash": "87aa2ff34c578a3a841df1f2680f55a6"
+        "hash": "03e66f4a5fb3a17880e549f7ca80d4ba"
     },
     "public/shinka_ajax_paging_watched_threads_list.json": {
-        "hash": "882da8ae1eab8718d1d569c566daac69"
+        "hash": "82c0d8d0a9fc777cae2e661dc287e6f1"
     },
     "public/shinka_ajax_paging_whats_new_posts.json": {
-        "hash": "689cd6118dafaf3f28ee01cf00237461"
+        "hash": "85131d7aa2089af48ff28f69551482a4"
     },
     "public/shinka_ajax_paging_whats_new_profile_posts.json": {
-        "hash": "f965f41f013798d5b68eae622d78a3be"
+        "hash": "2fe787b950412051444fd75304302069"
     }
 }

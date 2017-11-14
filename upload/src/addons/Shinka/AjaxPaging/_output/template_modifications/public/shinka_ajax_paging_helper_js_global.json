@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": "<!--XF:CSS-->",
-    "replace": "<xf:js src=\"shinka/ajaxpaging/paging.js\" min=\"1\" />\n$0"
+    "replace": "<xf:js src=\"shinka/ajaxpaging/ajaxpaging.js\" />\n$0"
 }

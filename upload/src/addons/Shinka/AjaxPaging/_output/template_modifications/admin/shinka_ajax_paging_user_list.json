@@ -4,6 +4,6 @@
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
-    "find": "params=\"{{ {'criteria': $criteria, 'order': $order, 'direction': $direction} }}\"",
-    "replace": "params=\"{{ {'criteria': $criteria, 'order': $order, 'direction': $direction, 'ajax': true, 'replace': '.block with .block'} }}\""
+    "find": "class=\"block\"",
+    "replace": "class=\"block\"\ndata-xf-init=\"ajax-page\"\ndata-page=\"{$page}\""
 }

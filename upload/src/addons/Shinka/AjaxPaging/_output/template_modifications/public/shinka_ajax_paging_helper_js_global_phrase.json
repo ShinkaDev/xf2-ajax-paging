@@ -1,0 +1,9 @@
+{
+    "template": "helper_js_global",
+    "description": "",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "no_items_to_display: \"{{ phrase('no_items_to_display')|escape('js') }}\"",
+    "replace": "no_items_to_display: \"{{ phrase('no_items_to_display')|escape('js') }}\",\ntitle_page_x: \"{{ phrase('title_page_x')|escape('js') }}\""
+}

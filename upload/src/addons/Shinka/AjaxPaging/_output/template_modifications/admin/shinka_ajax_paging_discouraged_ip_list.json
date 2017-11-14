@@ -4,6 +4,6 @@
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
-    "find": "'direction': ($direction != 'desc' ? $direction : '')",
-    "replace": "'direction': ($direction != 'desc' ? $direction : ''),\n'ajax': true, 'replace': 'form.block:first'"
+    "find": "<xf:form action=\"{{ link('banning/discouraged-ips/delete') }}\" ajax=\"true\" class=\"block\">",
+    "replace": "<xf:form action=\"{{ link('banning/discouraged-ips/delete') }}\" \n\t\t ajax=\"true\"\n\t\t id=\"discouraged-ips\"\n\t\t class=\"block\"\n\t\t data-xf-init=\"ajax-page\"\n\t\t data-page=\"{$page}\"\n\t\t data-filter=\"#discouraged-ips\"\n\t\t data-replace=\"#discouraged-ips .block-container, #discouraged-ips .block-outer with .block-container, .block-outer\">"
 }

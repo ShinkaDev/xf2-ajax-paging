@@ -4,6 +4,6 @@
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
-    "find": "<xf:pagenav",
-    "replace": "<xf:pagenav params=\"{{ {'ajax': true} }}\""
+    "find": "class=\"block\"",
+    "replace": "class=\"block\" \ndata-xf-init=\"ajax-page\"\ndata-page=\"{$page}\""
 }

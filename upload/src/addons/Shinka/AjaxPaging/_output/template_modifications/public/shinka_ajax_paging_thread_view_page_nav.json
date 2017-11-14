@@ -4,6 +4,6 @@
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
-    "find": "<xf:pagenav",
-    "replace": "<xf:pagenav params=\"{{ {'ajax': true, 'replace': '.block.block--messages with .block.block--messages'} }}\""
+    "find": "<div class=\"block block--messages\" data-xf-init=\"",
+    "replace": "<div class=\"block block--messages\" \n\t data-replace=\".block-outer, .block-container.lbContainer\"\n\t data-page=\"{$page}\"\n\t data-xf-init=\"ajax-page "
 }
