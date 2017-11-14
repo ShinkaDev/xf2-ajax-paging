@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "[Shinka] AJAX Paging",
+    "description": "Replaces pagination links with AJAX calls.",
+    "version_id": 10000034,
+    "version_string": "1.0.0 Beta 4",
+    "dev": "K. Robinson",
+    "dev_url": "https://github.com/kalynrobinson",
+    "faq_url": "https://github.com/kalynrobinson",
+    "support_url": "https://github.com/kalynrobinson/xf2_ajax_paging/issues",
+    "extra_urls": [],
+    "require": [],
+    "icon": ""
+}

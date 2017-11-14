@@ -3,6 +3,6 @@
     "js/shinka/ajaxpaging"
   ],
   "minify": [
-    "js/shinka/ajaxpaging/paging.js"
+    "js/shinka/ajaxpaging/ajaxpaging.js"
   ]
 }
